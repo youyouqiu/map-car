@@ -1,0 +1,22 @@
+<!--轨迹-->
+<view class="container v-container">
+  <bar-status></bar-status>
+  <view wx:if="{{!errorStatus}}" class="mapContainer">
+    <map id="map" class="map" longitude="{{centerLongitude ? centerLongitude : ''}}" latitude="{{centerLatitude ? centerLatitude : ''}}" enable-satellite="{{isSatellite}}" markers="{{markers}}" include-points="{{defaultPoints}}" polyline="{{polyline}}" scale="{{scale}}" bindregionchange="regionChange"></map>
+    <map-control bind:modelChange="modelChange" bind:scaleChange="scaleChange" refreshFlag="true">
+    </map-control>
+    <cover-view class="mapTime">当前时间范围：{{startTime ? startTime : '-'}} ~ {{endTime ? endTime : '-'}}</cover-view>
+  </view>
+  <view wx:if="{{!errorStatus}}" class="infoMessage">
+    <view class="time">{{currentLocation.date ? currentLocation.date : '-'}} {{currentLocation.time ? currentLocation.time : '-'}} {{currentLocation.speed || currentLocation.speed == 0 ? currentLocation.speed + 'km/h' : '-'}}</view>
+    <view class="address">地点：{{currentLocation.address ? currentLocation.address : '-'}}</view>
+    <view class="track">
+      <canvas class="trackRoute" type="2d" id="trackRoute"></canvas>
+      <canvas bindtouchmove="handleMarkhMove" bindtouchstart="handleMarkhStart" bindtouchcancel="handleMarkhCancel" bindtouchend="handleMarkhEnd" class="mark" type="2d" id="mark"></canvas>
+      <image class="play-icon" bindtap="bindPlayTrack" data-status="{{playStatus}}" src="/assets/images/{{!playStatus ? 'play-icon' : 'pause-icon'}}.png"></image>
+    <view class="customTime" bindtap="goCustomTime">自定义时间 <image class="icon" src="/assets/images/arrow-right.png"></image></view>
+    </view>
+  </view>
+  <error-page wx:if="{{errorStatus}}" bind:refresh="handleErrorRefresh" />
+</view>
+<tab-bar active="1"></tab-bar>

@@ -1,0 +1,9 @@
+.map-tools{
+  position: absolute;
+  right: 12rpx;
+  bottom: 0;
+}
+.map-tool-icon{
+  width: 70.04831rpx;
+  height: 70.65217rpx;
+}

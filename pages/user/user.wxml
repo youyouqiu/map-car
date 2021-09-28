@@ -1,0 +1,18 @@
+<!-- 我的 -->
+<view class="container v-container">
+  <bar-status></bar-status>
+  <view class="user-menus">
+    <view class="menu-item">
+      保养提醒
+      <view wx:if="{{errorStatus}}" class="user-remind" bindtap="updateMaintenance">查询失败</view>
+      <view wx:else class="maintain-mileage">
+      <!-- {{distance && maintainMileage && distance >= maintainMileage}} -->
+        <text class="{{distance && maintainMileage && (distance >= maintainMileage) ? 'error' : ''}}">{{distance ? distance : '-'}}</text> / 
+          {{maintainMileage ? maintainMileage : '-'}} KM
+      </view>
+    </view>
+    <view class="menu-item" bindtap="goUpdatePasswd">修改密码</view>
+    <view class="menu-item" bindtap="loginOut">退出登录</view>
+  </view>
+</view>
+<tab-bar active="3"></tab-bar>

@@ -1,0 +1,26 @@
+.v-container{
+  background: #f5f5f5;
+}
+.user-menus{
+  background: #fff;
+  margin: 24rpx;
+  border-radius: 12rpx;
+}
+.menu-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e2e2e4;
+  padding: 30.19324rpx 38.64734rpx;
+  font-size: 26rpx;
+}
+.menu-item:last-child{
+  border-bottom: none;
+}
+.maintain-mileage .error{
+  color: #ff595a;
+}
+.user-remind{
+  float: right;
+  color: #4367fd;
+}

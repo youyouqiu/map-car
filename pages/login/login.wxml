@@ -1,0 +1,26 @@
+<!--登录-->
+<import src="/assets/components/loading/index.wxml" />
+<view class="container">
+  <form class="login-form" bindsubmit="loginFormSubmit">
+    <!-- <view class="logo"> -->
+      <!-- <image class="icon" mode="aspectFit" src="https://6465-develop-1-20hb3-1302057402.tcb.qcloud.la/staticImages/logo.png?sign=38269aa91f2043931a447577a1ad54c4&t=1588838209"></image> -->
+      <!-- <view class="text">{{name}}</view> -->
+    <!-- </view> -->
+    <view class="form-input-item">
+      <image class="icon" mode="aspectFit" src="https://6465-develop-1-20hb3-1302057402.tcb.qcloud.la/staticImages/chepai-icon2.png?sign=f3a2cf925ad5903b8043c3fd91b5021e&t=1625652007"></image>
+      <view class="input-item">
+        <input type="text" class="form-input" maxlength="20" name="plateNumber" placeholder="请输入车牌号" value="{{ plateNumber }}" />
+      </view>
+      <view class="password-clone" bindtap="onClonePlateNumber">×</view>
+    </view>
+    <view class="form-input-item">
+      <image class="icon" mode="aspectFit" src="https://6465-develop-1-20hb3-1302057402.tcb.qcloud.la/staticImages/mima-icon2.png?sign=6194838a0f13100f00e228bc44a5c199&t=1625652026"></image>
+      <view class="input-item">
+        <input password type="text" class="form-input" maxlength="6" name="password" placeholder="请输入密码" value="{{ password }}" />
+      </view>
+      <view class="password-clone" bindtap="onClonePassword">×</view>
+    </view>
+    <button wx:if="{{!loginStatus}}" formType="submit" class="submit-btn">登 录</button>
+    <button wx:else class="submit-btn"><template is="loading" /></button>
+  </form>
+</view>

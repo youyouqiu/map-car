@@ -1,0 +1,113 @@
+page{
+  background: #f5f5f5;
+}
+.optionDate{
+  padding: 0 6rpx;
+  margin-top: 20.5314rpx;
+  margin-bottom: 20.5314rpx;
+  font-size: 21.13527rpx;
+  white-space: nowrap;
+  display: flex;
+}
+.optionDate .date-item,.optionDate .date-custom{
+  display: inline-block;
+  flex: 1;
+  padding: 28.23188rpx 12rpx;
+  margin-left: 6rpx;
+  margin-right: 6rpx;
+  border-radius: 8rpx;
+  background: #fff;
+  box-sizing: content-box;
+  border: 1px dashed #fff;
+  text-align: center;
+}
+.optionDate .date-item{
+  text-align: center;
+}
+.optionDate .date-custom{
+  border-color: #c4cfff;
+}
+.optionDate .date-custom .icon{
+  width: 9.66184rpx;
+  height: 16.30435rpx;
+  margin-left: 4rpx;
+}
+.optionDate .current{
+  background: #dfeaff;
+  border-color: #dfeaff;
+}
+.optionDate .active{
+  background: #4367fd;
+  border-color: #4367fd;
+  color: #fff;
+}
+.alarmInfo{
+  background: #fff;
+  margin-left: 13.88889rpx;
+  margin-right: 13.88889rpx;
+  padding: 10.86957rpx 15.70048rpx;
+  border-radius: 8rpx;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10.86957rpx;
+}
+.alarmInfo image{
+  width: 30.19324rpx;
+  height: 30.19324rpx;
+  margin-right: 12rpx;
+}
+.data-list{
+  flex: 1;
+  overflow: hidden;
+}
+.empty{
+  margin-top: 100rpx;
+  padding: 24rpx;
+  text-align: center;
+}
+.list-body{
+  height: 100%;
+}
+.list-item{
+  background: #fff;
+  margin: 0 13.88889rpx 10.86957rpx;
+  padding: 15.70048rpx;
+  border-radius: 8rpx;
+  line-height: 44rpx;
+}
+.list-item .icon{
+  width: 44rpx;
+  height: 44rpx;
+  margin-right: 10rpx;
+  float: left;
+}
+.list-item .datetime,.list-item .location{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.list-item .datetime{
+  margin-bottom: 8rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.list-item .datetime .datetime-right{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.datetime-right .datetime-red{
+  width: 14rpx;
+  height: 14rpx;
+  background-color: rgb(190,68,63);
+  border-radius: 50%;
+}
+.datetime-right .datetime-text{
+  font-size: 24rpx;
+  color: rgb(190,68,63);
+  margin-left: 8rpx;
+}

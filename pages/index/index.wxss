@@ -1,0 +1,47 @@
+.container{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url(https://6465-develop-1-20hb3-1302057402.tcb.qcloud.la/staticImages/yindao-bg.png?sign=af27315fad22a4ee69ef8558831f5ac5&t=1625649929);
+  background-size: 100%;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-color: #d1ecff;
+}
+.logo{
+  text-align: center;
+  letter-spacing: 4rpx;
+  font-size: 34rpx;
+}
+.logo .icon{
+  width: 605.67633rpx;
+  height: 554.34783rpx;
+  margin-bottom: 99.63768rpx;
+}
+.logo .text{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  position: relative;
+  font-size: 60rpx;
+  color: rgb(29,122,187);
+}
+.logo .text-bg{
+  position: absolute;
+  top: -4rpx;
+  font-size: 60rpx;
+  color: rgb(255,255,255);
+}
+button:not([size='mini']).submit-btn{
+  width: 413.64734rpx;
+  margin-top: 88rpx;
+  background-color: rgba(255,255,255,0);
+  border: 1rpx solid rgb(217,235,254);
+}

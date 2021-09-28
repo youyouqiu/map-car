@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "bar-status": "/assets/components/barStatus/index",
+    "date-time-picker": "/assets/components/dateTimePicker/index"
+  }
+}

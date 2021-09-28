@@ -1,0 +1,59 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/trajectory/trajectory",
+    "pages/password/password",
+    "pages/user/user",
+    "pages/dateTime/dateTime",
+    "pages/alarm/alarm",
+    "pages/position/position",
+    "pages/login/login"
+    
+  ],
+  "window": {
+    "navigationStyle": "custom",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "单车登录",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "networkTimeout": {
+    "request": 8000,
+    "downloadFile": 8000
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#999db2",
+    "selectedColor": "#4367fd",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/position/position",
+        "text": "位置",
+        "iconPath": "/assets/images/tab1.png",
+        "selectedIconPath": "/assets/images/tab1-active.png"
+      },
+      {
+        "pagePath": "pages/trajectory/trajectory",
+        "text": "轨迹",
+        "iconPath": "/assets/images/tab2.png",
+        "selectedIconPath": "/assets/images/tab2-active.png"
+      },
+      {
+        "pagePath": "pages/alarm/alarm",
+        "text": "报警",
+        "iconPath": "/assets/images/tab3.png",
+        "selectedIconPath": "/assets/images/tab3-active.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "/assets/images/tab4.png",
+        "selectedIconPath": "/assets/images/tab4-active.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+<!-- 报警 -->
+<view class="container v-container">
+	<bar-status></bar-status>
+	<view class="optionDate">
+		<view wx:for="{{datetimes}}" wx:key="index" data-datetime="{{ item.datetime }}" data-week="{{ item.week }}" class="date-item {{item.datetime == currentTime.datetime ? 'current' : ''}} {{item.datetime == activeTime ? 'active' : ''}}" bindtap="handleDateTimeChange">
+			{{item.date}}
+			<view>{{item.week}}</view>
+		</view>
+		<view class="date-custom" bindtap="goCustomTime">
+			自定义
+			<view>
+				时间
+				<image class="icon" src="/assets/images/arrow-right.png"></image>
+			</view>
+		</view>
+	</view>
+	<view wx:if="{{ alarmData.length }}" class="alarmInfo">
+		<image src="/assets/images/alarm-icon.png"></image>
+		报警总数：{{totalRecords}}
+	</view>
+	<!-- alarm-icon.png -->
+	<view wx:if="{{ isEmptyPage }}" class="empty">
+		未查询到任何记录
+		<view>请重新设置查询时间试试</view>
+	</view>
+	<view wx:else class="data-list">
+		<scroll-view class="list-body" scroll-y="true" bindscrolltolower="scrollLoadMore" refresher-enabled refresher-triggered="{{ loadRefresher }}" bindrefresherrefresh="onRefresherRefresh" scroll-top="{{scrollTop}}">
+			<view wx:for="{{ alarmData }}" class="list-item" wx:key="id" data-id="{{ item.id }}">
+				<!-- 由于小程序查询的是碰撞报警  基本上碰撞报警的开始时间和结束时间都是一样的 -->
+				<view class="datetime">
+					<view class="datetime-left">
+						<image class="icon" mode="aspectFit" src="https://6465-develop-1-20hb3-1302057402.tcb.qcloud.la/staticImages/time-icon.png?sign=3f9aee0b2d82e576713af0373b9a61c1&t=1588909783"></image>
+						<text>{{item.endTime || '-'}}</text>
+					</view>
+					<view class="datetime-right">
+						<view class="datetime-red"></view>
+						<text class="datetime-text">{{ item.description }}</text>
+					</view>
+				</view>
+				<view class="location">
+					<image class="icon" mode="aspectFit" src="https://6465-develop-1-20hb3-1302057402.tcb.qcloud.la/staticImages/location-icon.png?sign=1f5582d12f4ac5a15a34ae122c9d4869&t=1588909796"></image>
+					{{item.alarmEndSpecificLocation || '-'}}
+				</view>
+			</view>
+		</scroll-view>
+	</view>
+</view>
+<tab-bar active="2"></tab-bar>

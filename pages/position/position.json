@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "bar-status": "/assets/components/barStatus/index",
+    "error-page": "/assets/components/error/index",
+    "map-control": "/assets/components/mapControl/index",
+    "tab-bar": "/assets/components/customTabBar/index"
+  }
+}

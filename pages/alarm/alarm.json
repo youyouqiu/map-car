@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "bar-status": "/assets/components/barStatus/index",
+    "tab-bar": "/assets/components/customTabBar/index"
+  }
+}

@@ -1,0 +1,6 @@
+<cover-view class="errorIndex">
+  <cover-view class="error" bindtap="refresh">
+    查询失败，请稍后重试
+    <cover-image class="icon" mode="aspectFit" src="/assets/images/refresh-icon.png"></cover-image>
+  </cover-view>
+</cover-view>

@@ -1,0 +1,71 @@
+.mapContainer{
+  flex: 1;
+  position: relative;
+}
+.mapContainer .map{
+  width: 100%;
+  height: 100%;
+}
+.mapContainer .mapTime{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: rgba(255, 255, 255, 0.5);
+  font-size: 22rpx;
+  text-align: center;
+  line-height: 54.34783rpx;
+  z-index: 9;
+}
+
+.infoMessage{
+  padding: 18.11594rpx 36.23188rpx;
+  font-size: 24.15459rpx;
+}
+.infoMessage .time{
+  margin-top: 12rpx;
+}
+.infoMessage .address{
+  margin-top: 20rpx;
+  margin-bottom: 18rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.infoMessage .track{
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+.infoMessage .mark,.infoMessage .trackRoute{
+  height: 44rpx;
+  position: absolute;
+  top: 4rpx;
+  left: 0;
+  right: 216rpx;
+  bottom: 0;
+  width: auto;
+}
+.infoMessage .trackRoute{
+  left: 22rpx;
+  right: 238rpx;
+}
+.infoMessage .play-icon{
+  width: 48rpx;
+  height: 48rpx;
+}
+.infoMessage .customTime{
+  width: 128rpx;
+  height: 42rpx;
+  border: 3rpx dotted #c4cfff;
+  border-radius: 8rpx;
+  text-align: center;
+  line-height: 40rpx;
+  font-size: 18.11594rpx;
+  margin-left: 20rpx;
+}
+.infoMessage .customTime .icon{
+  width: 9.66184rpx;
+  height: 16.30435rpx;
+  margin-left: 2rpx;
+}

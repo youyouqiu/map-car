@@ -1,0 +1,40 @@
+.mapContainer {
+  flex: 1;
+  position: relative;
+}
+
+.mapContainer .map {
+  width: 100%;
+  height: 100%;
+}
+
+.model {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.infoMessage {
+  padding: 12rpx;
+  font-size: 24rpx;
+}
+
+.infoMessage .time, .infoMessage .address {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 5rpx 12rpx;
+  line-height: 44rpx;
+}
+
+.infoMessage .icon {
+  width: 44rpx;
+  height: 44rpx;
+  margin-right: 10rpx;
+  float: left;
+}
+
+.map-tool-icon{
+  width: 70.04831rpx;
+  height: 70.65217rpx;
+}

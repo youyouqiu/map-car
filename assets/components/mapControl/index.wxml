@@ -1,0 +1,15 @@
+<view class="map-tools">
+  <!-- 地图模式 -->
+  <view bindtap="bindModelChange">
+    <image class="map-tool-icon" src="https://6465-develop-1-20hb3-1302057402.tcb.qcloud.la/staticImages/mode-icon.png?sign=1dc7870517102eb723306c6c61c8a230&t=1588917795"></image>
+  </view>
+  <!-- 地图缩放比例增加 -->
+  <view bindtap="bindScaleChange" data-step="1">
+    <image class="map-tool-icon" src="https://6465-develop-1-20hb3-1302057402.tcb.qcloud.la/staticImages/add-icon.png?sign=38b40a23c202865e7031e8e6b7072c90&t=1588917818"></image>
+  </view>
+  <!-- 地图缩放比例减小 -->
+  <view bindtap="bindScaleChange" data-step="-1">
+    <image class="map-tool-icon" src="https://6465-develop-1-20hb3-1302057402.tcb.qcloud.la/staticImages/reduce-icon.png?sign=683b44855e1d74085c65a68286d4425e&t=1588917834"></image>
+  </view>
+  <slot></slot>
+</view>

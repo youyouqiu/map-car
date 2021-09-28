@@ -1,0 +1,30 @@
+<!-- 自定义时间 -->
+<view class="container">
+  <bar-status pageBack="true" bind:pageBack="pageBack" title="自定义时间"></bar-status>
+  <view class="time-picker">
+    <view class="section">
+      <view class="section_title">开始时间</view>
+      <date-time-picker value="{{startTime}}" bind:change="handleStartTimeChange">
+        {{startTime}}
+      </date-time-picker>
+    </view>
+    <view wx:if="{{warning}}" class="wraning">
+      {{warning}}
+    </view>
+    <view wx:else class="intervalTime">
+      共
+      {{intervalTimes.days ? intervalTimes.days + ' 天' : ''}}
+      {{intervalTimes.hours ? intervalTimes.hours + ' 时' : ''}}
+      {{intervalTimes.minutes ? intervalTimes.minutes + ' 分' : ''}}
+      {{intervalTimes.seconds ? intervalTimes.seconds + ' 秒' : ''}}
+    </view>
+    <view class="section">
+      <view class="section_title">结束时间</view>
+      <date-time-picker value="{{endTime}}" bind:change="handleEndTimeChange">
+        {{endTime}}
+      </date-time-picker>
+    </view>
+  </view>
+  <button wx:if="{{!warning}}" class="submit-btn" data-type="confirm" bindtap="pageBack">确定</button>
+    <button wx:else class="submit-btn disabled">确定</button>
+</view>

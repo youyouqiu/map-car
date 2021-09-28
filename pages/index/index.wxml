@@ -1,0 +1,11 @@
+<!--引导页-->
+<view class="container">
+  <view class="logo">
+    <image class="icon" mode="aspectFit" src="https://6465-develop-1-20hb3-1302057402.tcb.qcloud.la/staticImages/yindao-icon.png?sign=a7bb54c4297a01d778e0c0d4b330a894&t=1625649892"></image>
+    <view class="text">
+      <view>{{name}}</view>
+      <view class="text-bg">{{name}}</view>
+    </view>
+  </view>
+  <button formType="submit" class="submit-btn" bindtap="goLogin">立即体验</button>
+</view>

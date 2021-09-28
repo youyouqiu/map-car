@@ -1,0 +1,9 @@
+<template name="loading">
+  <view class="loading">
+    <view class="span"></view>
+    <view class="span"></view>
+    <view class="span"></view>
+    <view class="span"></view>
+    <view class="span"></view>
+  </view>
+</template>

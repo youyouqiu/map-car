@@ -1,0 +1,8 @@
+<!-- 状态栏和顶部标题 -->
+<view class="barStatus" style="height: {{vh}}px;"></view>
+<view class="pageTitle">
+  <view wx:if="{{ pageBack }}" class="backIcon" bindtap="pageBack">
+    <image class="icon" mode="aspectFit" src="/assets/images/back.png"></image>
+  </view>
+  <view class="title">{{ pageTitle }}</view>
+</view>

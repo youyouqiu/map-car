@@ -1,0 +1,18 @@
+.errorIndex{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 98rpx;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  z-index: 11;
+}
+.errorIndex .icon{
+  display: block;
+  width: 46rpx;
+  height: 42rpx;
+  margin: 40rpx auto;
+}

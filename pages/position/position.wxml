@@ -1,0 +1,21 @@
+<!--位置-->
+<view class="container v-container">
+  <bar-status></bar-status>
+  <error-page wx:if="{{errorStatus}}" bind:refresh="handleErrorRefresh" />
+  <view wx:else class="mapContainer">
+    <map id="map" class="map" longitude="{{markers.length ? markers[0].longitude : centerLongitude}}" latitude="{{markers.length ? markers[0].latitude : centerLatitude}}" scale="{{scale}}" markers="{{markers}}" enable-satellite="{{isSatellite}}"></map>
+    <map-control bind:modelChange="modelChange" bind:scaleChange="scaleChange" refreshFlag="true">
+      <!-- 地图位置更新 -->
+      <view class="map-tool" bindtap="refreshChange">
+        <image class="map-tool-icon" src="https://6465-develop-1-20hb3-1302057402.tcb.qcloud.la/staticImages/refresh-icon-white.png?sign=8ae3b310534756131cadd10c60adcfac&t=1591234457"></image>
+      </view>
+    </map-control>
+  </view>
+  <view wx:if="{{!errorStatus}}" class="infoMessage">
+    <view class="time">
+      <image class="icon" mode="aspectFit" src="https://6465-develop-1-20hb3-1302057402.tcb.qcloud.la/staticImages/time-icon.png?sign=3f9aee0b2d82e576713af0373b9a61c1&t=1588909783"></image> 最后定位时间：{{gpsTime ? gpsTime : '--'}}</view>
+    <view class="address">
+      <image class="icon" mode="aspectFit" src="https://6465-develop-1-20hb3-1302057402.tcb.qcloud.la/staticImages/location-icon.png?sign=1f5582d12f4ac5a15a34ae122c9d4869&t=1588909796"></image> 最后定位位置：{{positionDescription ? positionDescription : '--'}}</view>
+  </view>
+</view>
+<tab-bar active="0"></tab-bar>
